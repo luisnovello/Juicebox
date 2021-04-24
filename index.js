@@ -10,12 +10,12 @@ const morgan = require('morgan');
 server.use(morgan('dev'));
 
 server.use((req, res, next) => {
-    console.log("<____Body Logger START____>");
-    console.log(req.body);
-    console.log("<_____Body Logger END_____>");
-  
-    next();
-  });
+  console.log("<____Body Logger START____>");
+  console.log(req.body);
+  console.log("<_____Body Logger END_____>");
+
+  next();
+});
 
 const { client } = require('./db')
 client.connect();
